@@ -1,0 +1,279 @@
+body{
+animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+from { opacity: 0; }
+to   { opacity: 1; }
+}
+
+@font-face {
+    font-family: 'loraregular';
+    src: url('lora-regular-webfont.woff2') format('woff2'),
+         url('lora-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fredericka_the_greatregular';
+    src: url('frederickathegreat-regular-webfont.woff2') format('woff2'),
+         url('frederickathegreat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+font-family: "loraregular", Helvetica, Arial, sans-serif;
+}
+
+a {
+text-decoration:underline;
+}
+
+a:link {
+color:#FFFFFF;
+}
+
+a:visited {
+ color: #FFFFFF;
+}
+
+h1, h2, h3, h4 {
+	font-family: "fredericka_the_greatregular", Helvetica, Arial, sans-serif;
+}
+
+.header {
+position: fixed;
+left: 0;
+top: 0;
+width: 100%;
+color: #000000;
+text-align: right;
+font-size:14px;
+}
+
+#headerlink {
+color: #000000;
+text-decoration:none;
+margin-right:20px;
+font-size:15px;
+}
+
+#headerlink:hover {
+text-decoration:underline;
+}
+
+input#search {
+border-radius: 24px; 
+padding: 12px 20px;
+padding-left:50px;
+width:500px;
+border:1px solid #E0E0E0;
+background-image: url(images/iconfinder.png);
+background-position: 15px;
+background-repeat: no-repeat;
+background-size: 18px;
+}
+
+.illustration {
+width:560px;
+margin:auto;
+margin-top:75px;
+margin-bottom:30px;
+text-align:center;
+
+}
+
+.illustration img {
+width:100%;
+border-radius: 4px;
+}
+
+.illustration iframe {
+border-radius: 4px;
+}
+
+.search:hover {
+box-shadow: 0 0 8px rgba(33,33,33,.2);
+}
+
+.bubble-text-golive {
+position:relative;
+background:#139ee0;
+color:#fff;
+padding:14px 25px;
+padding-bottom:10px;
+border-radius:4px;
+width:515px;
+margin:auto;
+margin-top:25px;
+transition: transform .5s;
+text-align:center;
+}
+
+.bubble-text-youtube {
+position:relative;
+background:#bb0000;
+color:#fff;
+padding:14px 25px;
+border-radius:4px;
+width:515px;
+margin:auto;
+transition: transform .5s;
+text-align:center;
+}
+
+.bubble-text-youtube h1 {
+margin-top: 4px;
+text-align: left;
+}
+
+.bubble-text-youtube a {
+text-decoration:none;
+}
+
+.bubble-text-youtube:hover {
+  transform: scale(1.04);
+}
+
+.bubble-text-twitch {
+position:relative;
+background:#6441a5;
+color:#fff;
+padding:14px 25px;
+border-radius:4px;
+width:515px;
+margin:auto;
+margin-top:25px;
+transition: transform .5s;
+text-align:center;
+}
+
+.bubble-text-twitch h1 {
+margin-top: 4px;
+text-align: left;
+}
+
+.bubble-text-twitch a {
+text-decoration:none;
+}
+
+.bubble-text-twitch:hover {
+  transform: scale(1.04);
+}
+
+.bubble-text-warning {
+position:relative;
+background:#efd807;
+color:#000000;
+padding:14px 25px;
+padding-bottom:10px;
+border-radius:4px;
+width:515px;
+margin:auto;
+transition: transform .5s;
+text-align:center;
+}
+
+.textecoupe {
+margin:0;
+padding:0;
+text-align:justify;
+max-height:390px;
+overflow:hidden;
+}
+
+.readmore {
+cursor:pointer;
+text-align:center;
+margin-top:25px;
+padding-top:10px;
+border-top:1px solid #FFFFFF;
+}
+
+.footer {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: #FFFFFF;
+color: #000000;
+text-align: center;
+box-shadow: 0 0 3px rgba(33,33,33,.2);
+font-size:14px;
+}
+
+#footerlink {
+color: #3e53db;
+text-decoration:none;
+}
+
+#footerlink:hover {
+text-decoration:underline;
+}
+
+.inputtexte {
+width: 560px;
+height:300px;
+margin-bottom:30px;
+margin-top:10px;
+padding: 12px 20px;
+box-sizing: border-box;
+background-color: #f8f8f8;
+border-radius: 4px;
+border: 2px solid #ccc;
+}
+
+.space {
+height:10px;
+}
+
+.inputsubmit {
+width: 560px;
+margin-top:10px;
+padding: 12px 20px;
+background-color: forestgreen;
+border-radius: 4px;
+border: 0px solid #ccc;
+color:#FFFFFF;
+cursor:pointer;
+}
+
+.inputdelete {
+width: 560px;
+margin-top:10px;
+margin-bottom:10px;
+padding: 12px 20px;
+background-color: red;
+border-radius: 4px;
+border: 0px solid #ccc;
+color:#FFFFFF;
+cursor:pointer;
+}
+
+.inputvideo {
+width: 100%;
+height:43px;
+margin-bottom:10px;
+margin-top:5px;
+padding: 12px 20px;
+box-sizing: border-box;
+background-color: #f8f8f8;
+border-radius: 4px;
+border: 2px solid #ccc;
+resize: none;
+}
+
+.inputtitre {
+width: 100%;
+height:43px;
+margin-bottom:10px;
+margin-top:5px;
+padding: 12px 20px;
+box-sizing: border-box;
+background-color: #f8f8f8;
+border-radius: 4px;
+border: 2px solid #ccc;
+resize: none;
+}
