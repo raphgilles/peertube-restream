@@ -103,7 +103,7 @@ $instance = cq("".$_POST['instance']."");
 $cledirect = cq("".$_POST['cledirect']."");
 $lienyoutube = cq("".$_POST['lienyoutube']."");
 
-$contenu = 'ffmpeg -i "hls+$(yt-dlp --no-part -g ' . $lienyoutube . ')" -filter:v scale=1280:720:force_original_aspect_ratio=decrease,pad=1280:720:-1:-1:color=black -c:v libx264 -preset superfast -maxrate 3000k -bufsize 6000k -pix_fmt yuv420p -r 24 -g 48 -t 3600 -c:a aac -b:a 160k -ac 2 -ar 44100 -f flv rtmp://' .$instance .':1935/live/' .$cledirect.'';
+$contenu = 'ffmpeg -i "hls+$(yt-dlp --no-part -g ' . $lienyoutube . ')" -c:v copy -c:a copy -f flv rtmp://' .$instance .':1935/live/' .$cledirect.'';
 
 
 $filename = 'twitch-live.sh';
