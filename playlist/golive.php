@@ -71,7 +71,7 @@ find . -name "*.mp4" -type f -delete
 CONCAT=$(echo $(ls *.ts) | sed -e "s/ /|/g")
 
 
-ffmpeg -re -y -i "concat:$CONCAT" -filter:v scale=1280:720:force_original_aspect_ratio=decrease,pad=1280:720:-1:-1:color=black -c:v libx264 -preset veryfast -maxrate 3000k -bufsize 6000k -pix_fmt yuv420p -r 25 -g 50 -c:a aac -b:a 160k -ac 2 -ar 44100 -f flv \
+ffmpeg -re -y -i "concat:$CONCAT" -c:v copy -c:a copy -f flv \
 "rtmp://' .$instance .':1935/live/' . $cledirect . '" ';
 
 
