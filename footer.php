@@ -1,0 +1,3 @@
+<div class="footer">
+  <p><img src="/images/peertube.png" style="height:25px; vertical-align:-7px; margin-right:5px;" /> <a href="https://joinpeertube.org/instances" id="footerlink">Trouver une instance PeerTube</a> <img src="/images/github.png" style="height:25px; vertical-align:-7px; margin-right:5px; margin-left:10px;" /> <a href="https://github.com/raphgilles/peertube-restream" id="footerlink">Source</a></p>
+</div>
