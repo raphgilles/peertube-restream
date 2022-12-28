@@ -2,8 +2,8 @@
 <html lang='fr'>
 <head>
 	<title>Restreamer des lives YouTube ou Twitch sur PeerTube</title>
-	<meta http-equiv="Content-Language" content="fr-FR">
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Language" content="fr-FR">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" href="style.css" type="text/css" />
 	<link rel="stylesheet" href="pace.css" type="text/css" />
 	<link rel="icon" type="image/png" href="images/favicon.png" />
@@ -11,17 +11,17 @@
 	
 <!-- Matomo -->
 <script type="text/javascript">
-	var _paq = window._paq = window._paq || [];
-	/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-	_paq.push(['trackPageView']);
-	_paq.push(['enableLinkTracking']);
-	(function() {
-		var u="//stats.4prod.com/";
-		_paq.push(['setTrackerUrl', u+'matomo.php']);
-		_paq.push(['setSiteId', '1']);
-		var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-		g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-	})();
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//stats.4prod.com/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
 </script>
 <!-- End Matomo Code -->
 
@@ -29,9 +29,7 @@
 
 <body>
 
-<div class="header">
-  <p><a href="https://tooter.social/@raph" id="headerlink">Mastodon</a> <a href="https://peertube.stream/accounts/raph" id="headerlink">PeerTube</a></p>
-</div>
+<?php include("header.php") ?>
 
 <div style="width:560px; margin:auto; margin-top:150px; text-align:center;"><a href="https://restream.peertube.stream/"><img src="images/logo-restream.png" alt="Rediffuser un live" style="max-width:560px; margin-bottom:50px;" /></a><br /></div>
 
@@ -53,9 +51,7 @@ Pour me soutenir financièrement :<br />
 
 <div style="height:150px;">&nbsp;</div>
 
-<div class="footer">
-  <p><img src="/images/peertube.png" style="height:25px; vertical-align:-7px; margin-right:5px;" /> <a href="https://joinpeertube.org/instances" id="footerlink">Trouver une instance PeerTube</a></p>
-</div>
+<?php include("footer.php") ?>
 
 </body>
 </html>
