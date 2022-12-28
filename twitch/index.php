@@ -37,9 +37,7 @@ paceOptions = {
 
 <body>
 
-<div class="header">
-  <p><a href="https://tooter.social/@raph" id="headerlink">Mastodon</a> <a href="https://peertube.stream/accounts/raph" id="headerlink">PeerTube</a></p>
-</div>
+<?php include __DIR__."/../header.php" ?>
 
 <?php exec("pgrep ffmpeg", $pids);
 if(empty($pids)) { ?>
@@ -50,7 +48,7 @@ if(empty($pids)) { ?>
 
 <form action="golive.php" method="post" enctype="multipart/form-data">
 
-<h3 style="text-align:left; font-family:robotolight; margin-top:75px;">URL de l'instance (sans https:// et sans le / à la fin)</h3>
+<h3 style="text-align:left; font-family:robotolight; margin-top:75px;">URL de l'instance PeerTube</h3>
 <textarea name="instance" class="inputvideo" required></textarea>
 
 <h3 style="text-align:left; font-family:robotolight; margin-top:25px;">Clé de diffusion du direct</h3>
@@ -88,8 +86,7 @@ Pour me soutenir financièrement :<br />
 <a href="https://fr.liberapay.com/raph/" target="_blank" title="Liberapay"><img src="https://img.shields.io/liberapay/goal/raph?label=Objectif%20atteint%20%C3%A0&style=social" alt="Soutien financier" style="padding-top:8px;"/></a>
 </div>
 
-<div class="footer">
-  <p><img src="../images/peertube.png" style="height:25px; vertical-align:-7px; margin-right:5px;" /> <a href="https://joinpeertube.org/instances" id="footerlink">Trouver une instance PeerTube</a></p>
-</div>
+<?php include __DIR__."/../footer.php" ?>
+
 </body>
 </html>

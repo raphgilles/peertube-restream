@@ -84,9 +84,7 @@ setTimeout("window.location=url", 500)
 
 <body onload="timer">
 
-<div class="header">
-  <p><a href="https://tooter.social/@raph" id="headerlink">Mastodon</a> <a href="https://peertube.stream/accounts/raph" id="headerlink">PeerTube</a></p>
-</div>
+<?php include __DIR__."/../header.php" ?>
 
 <div style="width:560px; margin:auto; margin-top:150px; text-align:center;"><img src="../images/logo-restream.png" alt="Restream" style="max-width:560px;" /><br /></div>
 
@@ -102,6 +100,10 @@ function cq($v){
 $instance = cq("".$_POST['instance']."");
 $cledirect = cq("".$_POST['cledirect']."");
 $lienyoutube = cq("".$_POST['lienyoutube']."");
+
+// On supprime le https:// et le slash à la fin si nécéssaire
+$instance = trim($instance, '/');
+$instance = preg_replace( "#^[^:/.]*[:/]+#i", "", $instance );
 
 $contenu = 'ffmpeg -i "hls+$(yt-dlp --no-part -g ' . $lienyoutube . ')" -c:v copy -c:a copy -f flv rtmp://' .$instance .':1935/live/' .$cledirect.'';
 
@@ -181,9 +183,7 @@ Pour me soutenir financièrement :<br />
 <a href="https://fr.liberapay.com/raph/" target="_blank" title="Liberapay"><img src="https://img.shields.io/liberapay/goal/raph?label=Objectif%20atteint%20%C3%A0&style=social" alt="Soutien financier" style="padding-top:8px;"/></a>
 </div>
 
-<div class="footer">
-  <p><img src="../images/peertube.png" style="height:25px; vertical-align:-7px; margin-right:5px;" /> <a href="https://joinpeertube.org/instances" id="footerlink">Trouver une instance PeerTube</a></p>
-</div>
+<?php include __DIR__."/../footer.php" ?>
 
 </body>
 </html>
